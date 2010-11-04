@@ -1,5 +1,5 @@
 Foghorn::Application.routes.draw do
-  resources :pets
+#  resources :pets
 
   resources :kids do
     resources :pets

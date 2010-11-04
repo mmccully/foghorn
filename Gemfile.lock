@@ -65,6 +65,7 @@ GEM
     treetop (1.4.8)
       polyglot (>= 0.3.1)
     tzinfo (0.3.23)
+    yaml_db (0.2.0)
 
 PLATFORMS
   x86-mingw32
@@ -72,3 +73,4 @@ PLATFORMS
 DEPENDENCIES
   pg
   rails (= 3.0.1)
+  yaml_db
