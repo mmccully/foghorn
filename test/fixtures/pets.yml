@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  pet_name: MyString
+  color: MyString
+  species: MyString
+
+two:
+  pet_name: MyString
+  color: MyString
+  species: MyString
