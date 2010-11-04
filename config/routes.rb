@@ -1,7 +1,9 @@
 Foghorn::Application.routes.draw do
   resources :pets
 
-  resources :kids
+  resources :kids do
+    resources :pets
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

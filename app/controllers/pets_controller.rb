@@ -40,12 +40,13 @@ class PetsController < ApplicationController
   # POST /pets
   # POST /pets.xml
   def create
-    @pet = Pet.new(params[:pet])
+    @kid = Kid.find(params[:kid_id])
+    @pet = @kid.pets.create(params[:pet])
 
     respond_to do |format|
       if @pet.save
-        format.html { redirect_to(@pet, :notice => 'Pet was successfully created.') }
-        format.xml  { render :xml => @pet, :status => :created, :location => @pet }
+        format.html { redirect_to(@kid, :notice => 'Pet was successfully created.') }
+        format.xml  { render :xml => @kid, :status => :created, :location => @kid }
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @pet.errors, :status => :unprocessable_entity }
