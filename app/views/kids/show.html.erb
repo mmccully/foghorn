@@ -10,6 +10,20 @@
   <%= @kid.last_name %>
 </p>
 
+<% @kid.pets.each do |pet| %>
+<p>
+  <b>Pet name:</b>
+  <%= pet.pet_name %>
+</p>
+<p>
+  <b>Color:</b>
+  <%= pet.color %>
+</p>
+<p>
+  <b>Pet is-a:</b>
+  <%= pet.species %>
+</p>
+<% end %>
 
 <%= link_to 'Edit', edit_kid_path(@kid) %> |
 <%= link_to 'Back', kids_path %>

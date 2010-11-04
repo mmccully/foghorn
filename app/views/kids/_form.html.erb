@@ -19,6 +19,17 @@
     <%= f.label :last_name %><br />
     <%= f.text_field :last_name %>
   </div>
+
+
+<%= f.fields_for :pets do |p| %>
+<p> <div>
+  <%= p.label :pet_name %>
+  <%= p.string_field :pet_name  %>
+  </div>
+</p>
+<% end %>
+
+
   <div class="actions">
     <%= f.submit %>
   </div>
