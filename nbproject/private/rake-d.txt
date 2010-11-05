@@ -4,11 +4,17 @@ db\:charset=
 db\:collation=
 db\:create=Create the database from config/database.yml for the current Rails.env (use db:create:all to create all dbs in the config)
 db\:create\:all=
+db\:data\:dump=Dump contents of database to db/data.extension (defaults to yaml)
+db\:data\:dump_dir=Dump contents of database to curr_dir_name/tablename.extension (defaults to yaml)
+db\:data\:load=Load contents of db/data.extension (defaults to yaml) into database
+db\:data\:load_dir=Load contents of db/data_dir into database
 db\:drop=Drops the database for the current Rails.env (use db:drop:all to drop all databases)
 db\:drop\:all=
+db\:dump=Dump schema and data to db/schema.rb and db/data.yml
 db\:fixtures\:identify=
 db\:fixtures\:load=Load fixtures into the current environment's database.  Load specific fixtures using FIXTURES=x,y. Load from subdirectory in test/fixtures using FIXTURES_DIR=z. Specify an alternative path (eg. spec/fixtures) using FIXTURES_PATH=spec/fixtures.
 db\:forward=
+db\:load=Load schema and data from db/schema.rb and db/data.yml
 db\:load_config=
 db\:migrate=Migrate the database (options: VERSION=x, VERBOSE=false).
 db\:migrate\:down=
