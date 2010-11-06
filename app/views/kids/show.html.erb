@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<h2>Kid</h2>
 <p>
   <b>First name:</b>
   <%= @kid.first_name %>
@@ -9,7 +9,8 @@
   <b>Last name:</b>
   <%= @kid.last_name %>
 </p>
-
+  <%= link_to 'Edit Names', edit_kid_path(@kid) %> |
+<%= link_to 'Back', kids_path %>
 <h2>Pets</h2>
 
 <table>
@@ -33,27 +34,6 @@
   </tr>
 <% end %>
 </table>
-  <%#*<h2>Add a Pet:</h2>%>
-  <%#= form_for([@kid, @kid.pets.build]) do |p| %>
-  <%#= p.error_messages  %>
-
-   <%#*<div class="field">%>
-    <%#= p.label :pet_name %><br />
-    <%#= p.text_field :pet_name %>
-  <%#*</div>%>
-  <%#*<div class="field">%>
-    <%#= p.label :color %><br />
-    <%#= p.text_field :color %>
-  <%#*</div>%>
-  <%#*<div class="field">%>
-    <%#= p.label :species %><br />
-    <%#= p.text_field :species %>
-  <%#*</div>%>
-  <%#*<div class="actions">%>
-    <%#= p.submit %>
-  <%#*</div>%>
-  <%# end %>
 
 
-  <%= link_to 'Edit', edit_kid_path(@kid) %> |
-<%= link_to 'Back', kids_path %>
+

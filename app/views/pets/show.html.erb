@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<h2>Pet</h2>
 <p>
   <b>Pet name:</b>
   <%= @pet.pet_name %>
@@ -18,3 +19,17 @@
 
 <%= link_to 'Edit', edit_pet_path(@pet) %> |
 <%= link_to 'Back', pets_path %>
+
+<h2>Kid Owner</h2>
+<p>
+  <b>Kid ID:</b>
+  <%= @pet.kid_id %>
+</p>
+<p>
+  <b>First name:</b>
+  <%= @pet.kid.first_name %>
+</p>
+<p>
+  <b>Last name:</b>
+  <%= @pet.kid.last_name %>
+</p>

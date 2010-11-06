@@ -9,6 +9,7 @@
     <th></th>
     <th></th>
     <th></th>
+    <th></th>
   </tr>
 
 <% @pets.each do |pet| %>
@@ -16,6 +17,7 @@
     <td><%= pet.pet_name %></td>
     <td><%= pet.color %></td>
     <td><%= pet.species %></td>
+    <td><%= pet.kid_id %></td>
     <td><%= pet.kid.first_name %> </td>
     <td><%= link_to 'Show', pet %></td>
     <td><%= link_to 'Edit', edit_pet_path(pet) %></td>
