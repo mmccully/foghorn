@@ -4,6 +4,7 @@
   <tr>
     <th>First name</th>
     <th>Last name</th>
+    <th>Number of pets</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,6 +14,7 @@
   <tr>
     <td><%= kid.first_name %></td>
     <td><%= kid.last_name %></td>
+    <td><%= kid.pets.count %></td>
     <td><%= link_to 'Show', kid %></td>
     <td><%= link_to 'Edit', edit_kid_path(kid) %></td>
     <td><%= link_to 'Destroy', kid, :confirm => 'Are you sure?', :method => :delete %></td>

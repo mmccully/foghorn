@@ -5,6 +5,7 @@
     <th>Pet name</th>
     <th>Color</th>
     <th>Species</th>
+    <th>Owner</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,6 +16,7 @@
     <td><%= pet.pet_name %></td>
     <td><%= pet.color %></td>
     <td><%= pet.species %></td>
+    <td><%= pet.kid.first_name %> </td>
     <td><%= link_to 'Show', pet %></td>
     <td><%= link_to 'Edit', edit_pet_path(pet) %></td>
     <td><%= link_to 'Destroy', pet, :confirm => 'Are you sure?', :method => :delete %></td>

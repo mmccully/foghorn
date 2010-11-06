@@ -11,41 +11,48 @@
 </p>
 
 <h2>Pets</h2>
-<% @kid.pets.each do |pet| %>
-  <p>
-    <b>Pet name:</b>
-    <%= pet.pet_name %>
-  </p>
-  <p>
-    <b>Color:</b>
-    <%= pet.color %>
-  </p>
-  <p>
-    <b>Pet is-a:</b>
-    <%= pet.species %>
-  </p>
-<% end %>
 
-  <h2>Add a Pet:</h2>
-  <%= form_for([@kid, @kid.pets.build]) do |p| %>
+<table>
+  <tr>
+    <th>Pet name</th>
+    <th>Color</th>
+    <th>Pet is-a</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @kid.pets.each do |pet| %>
+  <tr>
+    <td><%= pet.pet_name %></td>
+    <td><%= pet.color %></td>
+    <td><%= pet.species %></td>
+    <td><%= link_to 'Show', pet %></td>
+    <td><%= link_to 'Edit', edit_pet_path(pet) %></td>
+    <td><%= link_to 'Destroy', pet, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+  <%#*<h2>Add a Pet:</h2>%>
+  <%#= form_for([@kid, @kid.pets.build]) do |p| %>
   <%#= p.error_messages  %>
 
-   <div class="field">
-    <%= p.label :pet_name %><br />
-    <%= p.text_field :pet_name %>
-  </div>
-  <div class="field">
-    <%= p.label :color %><br />
-    <%= p.text_field :color %>
-  </div>
-  <div class="field">
-    <%= p.label :species %><br />
-    <%= p.text_field :species %>
-  </div>
-  <div class="actions">
-    <%= p.submit %>
-  </div>
-  <% end %>
+   <%#*<div class="field">%>
+    <%#= p.label :pet_name %><br />
+    <%#= p.text_field :pet_name %>
+  <%#*</div>%>
+  <%#*<div class="field">%>
+    <%#= p.label :color %><br />
+    <%#= p.text_field :color %>
+  <%#*</div>%>
+  <%#*<div class="field">%>
+    <%#= p.label :species %><br />
+    <%#= p.text_field :species %>
+  <%#*</div>%>
+  <%#*<div class="actions">%>
+    <%#= p.submit %>
+  <%#*</div>%>
+  <%# end %>
 
 
   <%= link_to 'Edit', edit_kid_path(@kid) %> |
