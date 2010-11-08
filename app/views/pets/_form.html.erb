@@ -24,8 +24,8 @@
     <%= f.text_field :species %>
   </div>
   <div class="field">
-    <%= f.label :kid_id %><br />
-    <%= f.text_field :kid_id %>
+    <%= f.label :kid_name %><br />
+    <%= collection_select(:pet, :kid_id, Kid.find(:all, :order => :first_name), :id, :first_name) %>
   </div>
   <div class="actions">
     <%= f.submit %>

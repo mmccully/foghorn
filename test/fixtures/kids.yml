@@ -7,3 +7,8 @@ one:
 two:
   first_name: MyString
   last_name: MyString
+
+mickey:
+    first_name: Mickey
+    last_name: Mouse
+
