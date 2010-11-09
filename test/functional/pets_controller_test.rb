@@ -2,7 +2,7 @@ require 'test_helper'
 
 class PetsControllerTest < ActionController::TestCase
   setup do
-    @pet = Pet.new(:one)
+    @pet = pets(:one)
   end
 
   test "should get index" do
