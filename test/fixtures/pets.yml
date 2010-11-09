@@ -1,13 +1,13 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
+alpha:
   pet_name: Bandit
   color: White
   species: Dog
-  kid_id: one
+  kid: one
 
-two:
+beta:
   pet_name: Pluto
   color: Tan
   species: Dog
-  kid_id: two
+  kid: two

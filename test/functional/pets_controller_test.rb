@@ -2,7 +2,13 @@ require 'test_helper'
 
 class PetsControllerTest < ActionController::TestCase
   setup do
-    @pet = pets(:one)
+    @pet = Pet.new(:pet_name => "Hamm",
+                    :color => "Pink",
+                    :species => "Pig")
+#                    :kid_id => :one)
+    @kid = Kid.find_by_first_name("Johnny")
+    @pet.kid_id = @kid.id
+    @pet.save
   end
 
   test "should get index" do
@@ -25,7 +31,7 @@ class PetsControllerTest < ActionController::TestCase
   end
 
   test "should show pet" do
-    get :show, :id => @pet.to_param
+    get :show, :id => @pet.id
     assert_response :success
   end
 

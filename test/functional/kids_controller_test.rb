@@ -2,7 +2,8 @@ require 'test_helper'
 
 class KidsControllerTest < ActionController::TestCase
   setup do
-    @kid = kids(:one)
+    @kid = Kid.new(:first_name => "George", :last_name => "Jungle")
+    @kid.save
   end
 
   test "should get index" do
@@ -16,13 +17,15 @@ class KidsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-#  test "should create kid" do
-#    assert_difference('Kid.count') do
-#      post :create, :kid => @kid.attributes
-#    end
-#
-#    assert_redirected_to kid_path(assigns(:kid))
-#  end
+  test "should create kid" do
+    # needs a unique first name to create
+    @kid.first_name = "Janet"
+    assert_difference('Kid.count') do
+      post :create, :kid => @kid.attributes
+    end
+
+    assert_redirected_to kid_path(assigns(:kid))
+  end
 
   test "should show kid" do
     get :show, :id => @kid.to_param
