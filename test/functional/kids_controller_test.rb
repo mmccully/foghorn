@@ -2,7 +2,7 @@ require 'test_helper'
 
 class KidsControllerTest < ActionController::TestCase
   setup do
-    @kid = kids(:one)
+    @kid = Kid.new(:one)
   end
 
   test "should get index" do

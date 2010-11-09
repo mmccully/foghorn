@@ -1,14 +1,10 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  first_name: MyString
-  last_name: MyString
+  first_name: Johnny
+  last_name: Quest
 
 two:
-  first_name: MyString
-  last_name: MyString
-
-mickey:
     first_name: Mickey
     last_name: Mouse
 

@@ -1,11 +1,13 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  pet_name: MyString
-  color: MyString
-  species: MyString
+  pet_name: Bandit
+  color: White
+  species: Dog
+  kid_id: one
 
 two:
-  pet_name: MyString
-  color: MyString
-  species: MyString
+  pet_name: Pluto
+  color: Tan
+  species: Dog
+  kid_id: two
