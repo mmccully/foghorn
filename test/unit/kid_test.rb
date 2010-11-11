@@ -17,11 +17,12 @@ class KidTest < ActiveSupport::TestCase
   test "kid names must be no more than 25 characters long" do
     kid = Kid.new(:first_name => "bob", :last_name => "nob")
 
-    assert kid.valid?, "First name should be maximun of :max characters"
+    assert kid.valid?, "Kid names should be maximun of 25 characters"
 
-#    kid.first_name = "123456789012345678790123456"
-#    assert kid.invalid?, "First name is 26 characters"
-#    assert_equal "is too long (maximun is 25 characters)",
-#          kid.errors[:first_name].join('; ')
+    kid.first_name = "123456789012345678790123456"
+    kid.last_name = "123456789012345678790123456"
+    assert kid.invalid?, "Kid names should be maximun of 25 characters"
+    assert_equal "is too long (maximun is 25 characters)",
+          kid.errors[:first_name].join('; ')
   end
 end
